@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random color generator</title>
+    <!-- css file link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="app-body">
+      <!-- header part start -->
+      <div class="header">
+        <h2>Display color</h2>
+        <button class="random-color-btn">Random color</button>
+      </div>
+      <!-- header part end -->
+      <div class="seprator"></div>
+      <!-- color dispplay part start -->
+      <div class="color-display"></div>
+      <!-- color display part end -->
+      <!-- copy color part start  -->
+      <div class="copy-to-color">
+        <h2>Change & Copy Color</h2>
+        <div class="copy-color-mode-btn">
+          <button class="save-color-btn">Save</button>
+          <button class="copy-color-btn">Copy To Clipboard</button>
+        </div>
+      </div>
+      <!-- copy color part end -->
+      <div class="seprator"></div>
+      <!-- select color mode part start -->
+      <div class="select-copy-mode">
+        <h2>select copy mode</h2>
+        <div class="radio-btn">
+          <div class="hex">
+            <input type="radio" name="color-mode" value="hex" checked />
+            <label>Hex</label>
+          </div>
+          <div class="rgb">
+            <input type="radio" name="color-mode" value="rgb" />
+            <label>Rgb</label>
+          </div>
+        </div>
+      </div>
+      <div class="seprator"></div>
+      <!-- copy color mode part end -->
+      <div class="select-mode-input">
+        <!-- hex input -->
+        <div class="hex-mode">
+          <label>Hex</label>
+          <div>
+            <span>#</span>
+            <input
+              class="hex-input"
+              type="text"
+              value="DDDEEE"
+              placeholder="DDDEEE"
+            />
+          </div>
+        </div>
+        <!-- rgb input -->
+        <div class="rgb-mode">
+          <label>Rgb</label>
+          <input
+            class="rgb-input"
+            type="text"
+            value="rgb(255, 255, 238)"
+            placeholder="rgb(255, 255, 238)"
+            disabled
+          />
+        </div>
+      </div>
+      <!-- adjust rgb color -->
+      <div class="adjust-rgb-color">
+        <!-- red -->
+        <div class="red">
+          <div class="red-value">
+            <span>red</span>
+            <span class="red-color-value">221</span>
+          </div>
+          <input
+            class="color-slider-red"
+            type="range"
+            value="221"
+            min="0"
+            max="255"
+          />
+        </div>
+        <!-- green -->
+        <div class="green">
+          <div class="green-value">
+            <span>green</span>
+            <span class="green-color-value">222</span>
+          </div>
+          <input
+            class="color-slider-green"
+            type="range"
+            value="222"
+            min="0"
+            max="255"
+          />
+        </div>
+        <!-- blue -->
+        <div class="blue">
+          <div class="blue-value">
+            <span>blue </span>
+            <span class="blue-color-value">238</span>
+          </div>
+          <input
+            class="color-slider-blue"
+            type="range"
+            value="238"
+            min="0"
+            max="255"
+          />
+        </div>
+      </div>
+      <!-- select color mode part end -->
+      <!-- color preset part start -->
+      <div class="colo-preset">
+        <h2>Preset Color</h2>
+        <div class="seprator"></div>
+        <div class="preset-card"></div>
+      </div>
+      <!-- color preset part end -->
+      <!-- custom color part start -->
+      <div class="custom-color">
+        <h2>Custom Color</h2>
+        <div class="seprator"></div>
+        <div class="preset-card" id="custom-card"></div>
+      </div>
+      <!-- custom colot part end -->
+      <!-- background preferances part start -->
+      <div class="background-preferances">
+        <h2>background preferances</h2>
+        <div class="seprator"></div>
+        <div class="background-privew">
+          <div class="col">
+            <h3>background preview</h3>
+            <div class="background"></div>
+            <input type="file" class="input-file" accept="image/*" hidden />
+            <button class="upload-btn">upload</button>
+            <button class="remove-btn">remove</button>
+          </div>
+          <div class="col">
+            <div class="select-group">
+              <label class="lead" for="bg-size">Background Size :</label> <br />
+              <select name="bg-size" id="bg-size" class="text-input">
+                <option value="auto">Auto</option>
+                <option value="inherit">Inherit</option>
+                <option value="contain">Contain</option>
+                <option value="cover">Cover</option>
+              </select>
+            </div>
+            <div class="select-group">
+              <label class="lead" for="bg-repeat">Background Repeat :</label>
+              <br />
+              <select name="bg-repeat" id="bg-repeat" class="text-input">
+                <option value="repeat">Repeat</option>
+                <option value="no-repeat">No Repeat</option>
+              </select>
+            </div>
+            <div class="select-group">
+              <label class="lead" for="bg-position"
+                >Background Position :</label
+              >
+              <br />
+              <select name="bg-position" id="bg-position" class="text-input">
+                <option value="left top">Left Top</option>
+                <option value="left center">Left Center</option>
+                <option value="left bottom">Left Bottom</option>
+                <option value="right top">Right Top</option>
+                <option value="right center">Right Center</option>
+                <option value="right bottom">Right Bottom</option>
+                <option value="center top">Center Top</option>
+                <option value="center center">Center Center</option>
+                <option value="center bottom">Center Bottom</option>
+              </select>
+            </div>
+            <div class="select-group">
+              <label class="lead" for="bg-attachment"
+                >Background Attachment :</label
+              >
+              <br />
+              <select
+                name="bg-attachment"
+                id="bg-attachment"
+                class="text-input"
+              >
+                <option value="auto">Initial</option>
+                <option value="inherit">Inherit</option>
+                <option value="local">Local</option>
+                <option value="fixed">Fixed</option>
+                <option value="scroll">Scroll</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- background preferances part end -->
+    </section>
+    <!-- javascript file link -->
+    <script src="./color-preset.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
